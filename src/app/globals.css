@@ -1,2 +1,18 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
+@theme {
+  --color-brand-primary: #632EE3;
+  --color-brand-secondary: #9F62F2;
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(to right, var(--color-brand-primary), var(--color-brand-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient {
+  background-image: linear-gradient(to right, var(--color-brand-primary), var(--color-brand-secondary));
+}
