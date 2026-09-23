@@ -1,24 +1,14 @@
 import React from 'react'
 import AppCard from '../shared/AppCard'
-import { AppType } from '@/app/Types/App.type'
+import { AppType } from '@/Types/App.type'
+import { getApi } from '@/lib/apps'
 
 
-const getApi = async () => {
-  try {
-    const res = await fetch('http://localhost:3000/data.json')
-    if (!res.ok) {
-      throw new Error('Failed to fetch API data')
-    }
-    return await res.json()
-  } catch (error) {
-    console.error('Error fetching API data:', error)
-    return null;
-  }
-}
+
 
 const TrendingApp = async () => {
   const data = await getApi()
-  
+  console.log('Fetched data:', data) // Log the fetched data for debugging
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="mb-10 text-center md:text-left">

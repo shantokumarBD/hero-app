@@ -1,5 +1,5 @@
 
-import { AppType } from "@/app/Types/App.type";
+import { AppType } from "@/Types/App.type";
 import Image from "next/image";
 import React from "react";
 import { FaDownload, FaStar } from "react-icons/fa";
